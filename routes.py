@@ -12,7 +12,7 @@ def login():
     return render_template("login.html",login=True)
 
 @app.route("/courses")
-@app.route("/courses <term>")
+@app.route("/courses<term>")
 def courses(term = "Spring 2020"):
     courseData = [{"courseID":"1111","title":"PHP 101","description":"Intro to PHP","credits":3,"term":"Fall, Spring"},
      {"courseID":"2222","title":"Java 1","description":"Intro to Java Programming","credits":4,"term":"Spring"},
