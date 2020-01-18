@@ -25,3 +25,11 @@ def courses(term = "Spring 2020"):
 def register():
     return render_template("register.html",login=True)
 
+@app.route("/enrollment")
+def enrollment():
+
+    id = request.args.get('courseID')
+    title = request.args.get('title')
+    term = request.args.get('term')
+
+    return render_template("enrollment.html",login=True, data={"id":id, "title":title, "term":term})
